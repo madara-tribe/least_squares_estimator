@@ -6,8 +6,10 @@ after getting the absolute distance and x-coordinate, calcurate angle as servo m
 
 # how to estimate
 1. by running least-squares method to convert relative distance to absolute one by python
+   
 <code> $ python3 least_squares_calculate.py</code>
 2. calcurate servo angle from absolute distance and x-coordinate
+
 <code>ros2 run least_squares_fitter least_squares_fitter</code>
 
 as for the angle calcatation, refer the figure and code below.
