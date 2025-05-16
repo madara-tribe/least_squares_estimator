@@ -1,19 +1,10 @@
 # Estimate real distance via least squares
-This repository is to convert relative depth(midas prediction) to the actual physical distance (absolute distance) via the least-squares method. 
+This repository is to convert relative depth(midas prediction) to the actual physical distance (absolute distance) via the least-squares method.
 
-after getting the absolute distance and x-coordinate, calcurate angle as servo motor angle for real-world robotic applications such as object tracking or alignment.
+after getting the absolute distance and x-coordinate, calculate angle as servo motor angle for real-world robotic applications such as object tracking or alignment.
 
+as for the angle calcation, refer the figure and code below.
 
-# how to estimate
-1. by running least-squares method to convert relative distance to absolute one by python
-   
-<code> $ python3 least_squares_calculate.py</code>
-
-2. calcurate servo angle from absolute distance and x-coordinate
-
-<code>ros2 run least_squares_fitter least_squares_fitter</code>
-
-as for the angle calcatation, refer the figure and code below.
 ![Image](https://github.com/user-attachments/assets/7d5d643a-2c41-4f97-8e4c-52964588ecde)
 
 ```python
@@ -36,7 +27,17 @@ def calculate_angle_APh(x, z, x_max=80):
     cos_theta = dot / (mag_AP * mag_hP)
     angle_rad = math.acos(cos_theta)
     angle_deg = math.degrees(angle_rad)
-
     return angle_deg
 ```
+
+# how to estimate
+1. by running least-squares method to convert relative distance to absolute one by python
+   
+<code> $ python3 least_squares_calculate.py</code>
+
+2. calcurate servo angle from absolute distance and x-coordinate
+
+<code>ros2 run least_squares_fitter least_squares_fitter</code>
+
+
 
