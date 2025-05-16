@@ -32,7 +32,7 @@ DistanceEstimatorNode::DistanceEstimatorNode(const rclcpp::NodeOptions & options
         double Px = max_x / 2.0, Py = z;
         double hx = x, hy = 0.0;
 
-        // Vectors AP and hP (origin shifted to point P)
+        // Vectors AP and HP (origin shifted to point P)
         double vec_AP_x = Ax - Px;
         double vec_AP_y = Ay - Py;
 
