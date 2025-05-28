@@ -7,6 +7,16 @@ as for the angle calcation(θ), refer the figure and code below.
 
 ![Image](https://github.com/user-attachments/assets/7d5d643a-2c41-4f97-8e4c-52964588ecde)
 
+
+## formula to get angle
+
+when z change from 0 to 100, you can get angle θ（degree）
+
+$$
+\theta(z) = \arccos \left( \frac{-50(z-50) + 8100}{\sqrt{10600} \times \sqrt{(z-50)^2 + 8100}} \right) \times \frac{180}{\pi}
+$$
+
+
 ```python
 def calculate_angle_APh(x, z, x_max=80):
     # Coordinates
