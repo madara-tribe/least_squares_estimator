@@ -20,14 +20,18 @@ $$
 
 ```python
 import numpy as np
+AO = 50
+OP = 90
 
-def theta(z):
-    dot = -AO * (z - AO) + OP**2
+def theta(x):
+    dot = -AO * (x - AO) + OP**2
     mag_CA = np.sqrt(AO**2 + OP**2)
-    mag_Cx = np.sqrt((z - AO)**2 + OP**2)
+    mag_Cx = np.sqrt((x - AO)**2 + OP**2)
     cos_theta = dot / (mag_CA * mag_Cx)
     cos_theta = np.clip(cos_theta, -1.0, 1.0)
     return np.degrees(np.arccos(cos_theta))
+for x in range(0, 101, 10):
+    print(f"x = {x:3d} --> θ = {theta(x):.4f} [deg]")
 ```
 
 # how to estimate
