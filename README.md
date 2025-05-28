@@ -13,8 +13,11 @@ as for the angle calcation(θ), refer the figure and code below.
 when z change from 0 to 100, you can get angle θ（degree）
 
 $$
-\theta(z) = \arccos \left( \frac{-50(z-50) + 8100}{\sqrt{10600} \times \sqrt{(z-50)^2 + 8100}} \right) \times \frac{180}{\pi}
+\theta(z) = \arccos \left( \frac{-AO \cdot (z - AO) + OP^2}{\sqrt{AO^2 + OP^2} \cdot \sqrt{(z - AO)^2 + OP^2}} \right) \times \frac{180}{\pi}
 $$
+
+- \(OP = 90\)
+- \(AO = 50\)
 
 
 ```python
