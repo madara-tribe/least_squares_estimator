@@ -1,6 +1,11 @@
 # Estimate real distance via least squares
 This repository is to convert relative depth(midas prediction from [this repository](https://github.com/madara-tribe/Ros2-DepthCalculator-PX2)) to the actual physical distance (absolute distance) via the least-squares method.
 
+## How to get formula to get absolute distance
+run this scripts and command to get formula. after etting formula, you should use the formula to convert relative distance to absolute one.
+
+
+
 after getting the absolute distance and x-coordinate, calculate angle as servo motor angle for real-world robotic applications such as object tracking or alignment.
 
 as for the angle calcation(θ), refer the figure and code below.
