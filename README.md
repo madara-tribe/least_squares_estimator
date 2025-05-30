@@ -5,12 +5,12 @@ This repository is to convert relative depth(midas prediction from [this reposit
 run this scripts and command to get formula and the results save to <code>scripts/quadratic_coefficients.csv</code>. after etting formula, you should use the formula to convert relative distance to absolute one.
 
 ```bash
-$ python3 scripts/
+$ python3 scripts/least_squares_calculate.py
 ```
 ![Image](https://github.com/user-attachments/assets/f2117e24-7f3b-4c20-a9f7-c2d88e8993f7)
 
+## calcurate angle to turn servo mortor 
 after getting the absolute distance and x-coordinate, calculate angle as servo motor angle for real-world robotic applications such as object tracking or alignment.
-
 as for the angle calcation(θ), refer the figure and code below.
 
 ![Image](https://github.com/user-attachments/assets/7d5d643a-2c41-4f97-8e4c-52964588ecde)
@@ -39,19 +39,7 @@ def theta(x):
     cos_theta = np.clip(cos_theta, -1.0, 1.0)
     return np.degrees(np.arccos(cos_theta))
 
-
 for x in range(0, 101, 10):
     print(f"x = {x:3d} --> θ = {theta(x):.4f} [deg]")
 ```
-
-# how to estimate
-1. by running least-squares method to convert relative distance to absolute one by python
-   
-<code> $ python3 least_squares_calculate.py</code>
-
-2. calcurate servo angle from absolute distance and x-coordinate
-
-<code>ros2 run least_squares_fitter least_squares_fitter</code>
-
-
 
